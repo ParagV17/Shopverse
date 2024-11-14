@@ -10,7 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_11_14_143401) do
+ActiveRecord::Schema.define(version: 2024_11_14_144228) do
+
+  create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "brand"
+    t.integer "category_id"
+    t.float "price"
+    t.float "discount"
+    t.integer "stock_units"
+    t.float "ratings"
+    t.text "images"
+    t.boolean "is_listed"
+    t.boolean "is_active", default: true
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.datetime "deleted_at"
+  end
 
   create_table "user_addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.integer "user_id", null: false
