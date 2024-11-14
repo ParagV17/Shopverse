@@ -1,4 +1,5 @@
 class CreateProducts < ActiveRecord::Migration[5.2]
+  
   def self.up
     create_table :products do |t|
       t.string :name
