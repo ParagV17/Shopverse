@@ -7,7 +7,7 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.string :brand
       t.integer :category_id
       t.float :price
-      t.float :discount
+      t.float :discount_percent
       t.integer :stock_units
       t.float :ratings
       t.text :images

@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(version: 2024_11_14_162431) do
     t.string "brand"
     t.integer "category_id"
     t.float "price"
-    t.float "discount"
+    t.float "discount_percent"
     t.integer "stock_units"
     t.float "ratings"
     t.text "images"
