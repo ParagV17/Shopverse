@@ -14,7 +14,7 @@ class ProductsService
     where_obj[:deleted_at] = nil
     where_obj[:category_id] = params[:category] if params[:category].present?
 
-    products = Product.where(where_obj).order(created_at: :desc)
+    products = Product.where(where_obj).includes(:product_category).order(created_at: :desc)
 
   end
 
